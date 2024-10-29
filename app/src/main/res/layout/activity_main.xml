@@ -1,19 +1,197 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txtInput"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="end"
+        android:textSize="32sp"
+        android:background="@android:color/darker_gray"
+        android:padding="8dp"
+        android:text="0"
+        android:contentDescription="Calculator display" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="5"
+        android:paddingTop="16dp"
+        android:layout_gravity="center">
+
+        <!-- First row: Memory Buttons -->
+        <Button android:id="@+id/btnMC" android:text="MC"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnMR" android:text="MR"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnMS" android:text="MS"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnMPlus" android:text="M+"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnMMinus" android:text="M-"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnDelete" android:text="⌫"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnCE" android:text="CE"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnDeleteAll" android:text="C"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnPlusMinus" android:text="±"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnSquareRoot" android:text="√"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btn7" android:text="7"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnE8" android:text="8"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btn9" android:text="9"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnDivide" android:text="/"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnPercent" android:text="%"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btn4" android:text="4"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btn5" android:text="5"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btn6" android:text="6"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnMultiply" android:text="*"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnReciprocal" android:text="1/x"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btn1" android:text="1"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btn2" android:text="2"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btn3" android:text="3"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnMinus" android:text="-"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnEqual" android:text="="
+            android:layout_width="0dp" android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_rowSpan="2"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btn0" android:text="0"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:layout_columnSpan="2"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnDot" android:text="."
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+
+        <Button android:id="@+id/btnPlus" android:text="+"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#DF86EF"
+            android:textColor="#FFFFFF"/>
+    </GridLayout>
+
+</LinearLayout>
