@@ -1,26 +1,35 @@
 package com.example.calculator;
 
-import android.content.Context;
+import static org.junit.Assert.assertEquals;
 
-import androidx.test.platform.app.InstrumentationRegistry;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
-
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
+public class CalculatorUnitTest {
 
-import static org.junit.Assert.*;
+    private Calculator calculator;
 
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
-@RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
+    @Before
+    public void setUp() {
+        calculator = new Calculator();
+    }
+
     @Test
-    public void useAppContext() {
-        // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.calculator", appContext.getPackageName());
+    public void testAddition() {
+        assertEquals(5, calculator.add(2, 3));
+    }
+
+    @Test
+    public void testSubtraction() {
+        assertEquals(1, calculator.subtract(3, 2));
+    }
+
+    @Test
+    public void testMultiplication() {
+        assertEquals(6, calculator.multiply(2, 3));
+    }
+
+    @Test
+    public void testDivision() {
+        assertEquals(2, calculator.divide(6, 3));
     }
 }
